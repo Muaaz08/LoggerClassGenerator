@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logger class Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer async></script>
+  </head>
+  <body class="container">
+    <header>
+      <h1 class="title">Logger Class Generator</h1>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+      </div>
+    </header>
+    <main>
+      <div class="input">
+        <label class="labelTitle" for="inputLoggerClass">Input</label>
+        <textarea name="" id="inputLoggerClass"></textarea>
+        <button type="submit" id="btnGenerate">Generate</button>
+      </div>
+
+      <div class="output">
+        <label class="labelTitle" for="outputLoggerClass">Output</label>
+        <textarea name="" id="outputLoggerClass" readonly></textarea>
+        <button id="btnCopyToClipboard">Copy To Clipboard</button>
+      </div>
+    </main>
+  </body>
+</html>

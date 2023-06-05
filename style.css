@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #f9ebde;
+  --bg-light-color: #fff7ef;
+  --font-color: #f9ebde;
+  --font-dark-color: #815854;
+  --font-secondary-color: #815854;
+  --button-color: #815854;
+  --button-secondary-color: #fff7ef;
+}
+
+[data-theme="dark"] {
+  --bg-color: #815854;
+  --bg-light-color: #9166621f;
+  --font-color: #815854;
+  --font-dark-color: #f9ebde;
+  --font-secondary-color: #f9ebde;
+  --button-color: #f9ebde;
+  --button-secondary-color: #714d4a;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  -ms-appearance: none; /* For IE/Edge */
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  color: var(--font-secondary-color);
+}
+
+.labelTitle {
+  font-size: 18px;
+  color: var(--font-secondary-color);
+}
+
+main {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input,
+.output {
+  margin: 50px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#inputLoggerClass,
+#outputLoggerClass {
+  height: 440px;
+  min-height: 340px;
+  border-radius: 13px;
+  color: var(--font-dark-color);
+  background-color: var(--bg-light-color);
+  outline: 1px solid var(--button-color);
+  padding: 10px;
+}
+
+button#btnCopyToClipboard,
+button#btnGenerate {
+  padding: 1.5rem 0;
+  margin: 1.5rem 0 0;
+  border-radius: 13px;
+  background-color: var(--button-color);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--font-color);
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.theme-switch-wrapper > em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--button-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: var(--button-secondary-color);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: var(--button-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: var(--button-secondary-color);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
