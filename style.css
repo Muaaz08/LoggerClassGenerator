@@ -48,6 +48,7 @@ button {
 
 .labelTitle {
   font-size: 18px;
+  padding: 0 0 5px 0;
   color: var(--font-secondary-color);
 }
 
@@ -149,4 +150,22 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .theme-switch-wrapper {
+    position: absolute;
+    top: 55px;
+    right: -106px;
+  }
+
+  .input,
+  .output {
+    width: 95%;
+  }
 }
